@@ -1,6 +1,6 @@
 Layout, HORIZONTAL
 
-TYPE, NOTE, one,
+TYPE, NOTE, one
 one, LABEL, Edge Detection
 
 TYPE, DROPDOWN, Files
