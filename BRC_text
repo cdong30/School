@@ -1,0 +1,26 @@
+Layout, HORIZONTAL
+
+TYPE, NOTE, one,
+one, LABEL, Edge Detection
+
+TYPE, DROPDOWN, Files
+Files, LABEL, Files
+Files, OPTION, H, House
+Files, OPTION, C, Car
+Files, OPTION, B, Butterfly
+
+TYPE, BUTTON, Load
+Load, LABEL, Load
+
+TYPE, RANGE, Threshold
+Threshold, LABEL, Threshold
+Threshold, MIN, 0
+Threshold, MAX, 255
+Threshold, STEP, 1
+Threshold, VALUE, 50
+
+TYPE, BUTTON, Vert
+Vert, LABEL, Vertical Edges
+
+TYPE, BUTTON, Hor
+Hor, LABEL, Horizontal Edges
