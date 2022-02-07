@@ -24,3 +24,6 @@ Vert, LABEL, Vertical Edges
 
 TYPE, BUTTON, Hor
 Hor, LABEL, Horizontal Edges
+
+TYPE, BUTTON, Omni
+Omni, LABEL, Omni-Direction

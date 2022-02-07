@@ -3,10 +3,10 @@ import processing.net.*;
 Server BRCServer;
 
 int BRC_port = 10002;
-int BRC_WebBodySize = 7297;
+int BRC_WebBodySize = 7545;
 
-String[] BRC_ids = new String[] {"Files","Load","Threshold","Vert","Hor"};
-String[] BRC_values = new String[] {"H","0","50","0","0"};
+String[] BRC_ids = new String[] {"Files","Load","Threshold","Vert","Hor","Omni"};
+String[] BRC_values = new String[] {"H","0","50","0","0","0"};
 
 String[] BRC_Monitors = new String[] {};
 String[] BRC_MonitorValues = new String[] {};
@@ -288,7 +288,8 @@ String BRC_WebBody =
 + "[\"BUTTON\",\"brc_3\",\"Load\"],\n"
 + "[\"RANGE\",\"brc_4\",\"Threshold\",\"brc_5\"],\n"
 + "[\"BUTTON\",\"brc_6\",\"Vert\"],\n"
-+ "[\"BUTTON\",\"brc_7\",\"Hor\"]];\n"
++ "[\"BUTTON\",\"brc_7\",\"Hor\"],\n"
++ "[\"BUTTON\",\"brc_8\",\"Omni\"]];\n"
 + "\n"
 + "Monitor = false;\n"
 + "\n"
@@ -376,6 +377,9 @@ String BRC_WebBody =
 + "&nbsp;&nbsp;&nbsp;\n"
 + "\n"
 + " </td><td><input type=\"button\" name=\"<!--<id>-->\" id=\"<!--<id>-->\" value=\"Horizontal Edges\" onClick=\"SendNameValue('Hor='+Math.floor(Math.random()*1000000));\" />\n"
++ "&nbsp;&nbsp;&nbsp;\n"
++ "\n"
++ " </td><td><input type=\"button\" name=\"<!--<id>-->\" id=\"<!--<id>-->\" value=\"Omni-Direction\" onClick=\"SendNameValue('Omni='+Math.floor(Math.random()*1000000));\" />\n"
 + "&nbsp;&nbsp;&nbsp;\n"
 + "\n"
 + " </td></tr></table>\n"
