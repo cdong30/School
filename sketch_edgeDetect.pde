@@ -3,6 +3,7 @@ PImage img;
 String choose;
 int [] GArray;
 int threshold;
+int state = 0;
 
 void setup() {
   size(800, 800);
@@ -17,6 +18,7 @@ void draw() {
   brc();
   String name = brcChanged();
   if (name.equals("Load")) {
+    state = 0;
     if (brcValue("Files").equals("H")) choose = "house2.jpg";
     if (brcValue("Files").equals("C")) choose = "car-square.jpg";
     if (brcValue("Files").equals("B")) choose = "butterfly-2-square.jpg";
@@ -25,16 +27,23 @@ void draw() {
     grayscale();
   }
   if(name.equals("Vert")){
-    image(img, 0, 0);
-    Vertical();
+    state = 1;
+    //Vertical();
   }
   if(name.equals("Hor")){
-    image(img, 0, 0);
-    Horizontal();
+    state = 2;
+    //Horizontal();
+  }
+  if(name.equals("Omni")){
+    state = 3;
+    //Omni();
   }
   if(name.equals("Threshold")){
     threshold = int(brcValue("Threshold"));
   }
+  if(state == 1) Vertical();
+  if(state == 2) Horizontal();
+  if(state == 3) Omni();
   
 }
 
@@ -44,13 +53,11 @@ void grayscale() {
     GArray[i] = int((red(img.pixels[i]) 
       + green(img.pixels[i]) 
       + blue(img.pixels[i]))/3);
-    img.pixels[i] = color(GArray[i]); //get rid of it, we want the house to stay
+    img.pixels[i] = color(GArray[i]);
   }
   img.updatePixels();
   image(img, 0, 0);
 }
-
-//replace the 50 with the threshold value
 
 void Vertical() {
   img.loadPixels();
@@ -75,6 +82,24 @@ void Horizontal(){
     for(int row = 2; row < width -1; row++){
       int finder = row * width + col;
       if( (abs(GArray[(row -1) * width + col] - GArray[(row +1) * width + col]) > threshold)){
+        img.pixels[finder] = color(255);
+      }
+      else{
+        img.pixels[finder] = color(0);
+      }
+      img.updatePixels();
+    }
+  }
+  image(img, 0, 0);
+}
+
+void Omni(){
+  img.loadPixels();
+  for(int row = 2; row < height -1; ++row){
+    for(int col = 2; col < width - 1; ++col){
+      int finder = row * width + col;
+      if( (abs(GArray[finder -1] - GArray[finder + 1]) > threshold
+        || abs(GArray[(row-1) * width + col] - GArray[(row+1) * width + col])  > threshold)){
         img.pixels[finder] = color(255);
       }
       else{
