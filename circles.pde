@@ -1,6 +1,6 @@
 class circles{
-  float x = width/10;
-  float y = height/10;
+  float x = width/7;
+  float y = height/7;
   float c = color(0);
   
   Ani expandAni;
@@ -9,7 +9,12 @@ class circles{
   float expand = expandStart;
   float duration = 0.5;
   
-  circles(){
+  circles(float ax, float ay, float radii, color ac){
+    x = ax;
+    y = ay;
+    expandStart = radii;
+    c = ac;
+    fill(ac);
     expandAni = new Ani(this, duration, "expand", expandEnd);
     expandAni.pause();
     expand = expandEnd;
@@ -19,5 +24,9 @@ class circles{
     expand = expandStart;
     expandAni.seek(0);
     expandAni.resume();
+  }
+  
+  void display(){
+    circle(x, y, expandStart);
   }
 }
