@@ -1,0 +1,45 @@
+LAYOUT, VERTICAL
+
+TYPE, DROPDOWN, Files
+Files, LABEL, Files
+Files, OPTION, A, img1
+Files, OPTION, B, img2
+Files, OPTION, C, img3
+
+TYPE, NOTE, Easing Types
+Easing Types, LABEL, Easing Types
+
+TYPE, DROPDOWN, Easing
+Easing, LABEL, Easing
+Easing, OPTION, A, Linear, SELECTED
+Easing, OPTION, B, Quad_IN
+Easing, OPTION, C, Quad_OUT
+Easing, OPTION, D, Cubic_IN_OUT
+Easing, OPTION, E, Quart_IN_OUT
+Easing, OPTION, F, Quint_IN_OUT
+Easing, OPTION, G, SINE_IN_OUT
+Easing, OPTION, H, CIRC_IN_OUT
+Easing, OPTION, I, EXPO_IN_OUT
+Easing, OPTION, J, BACK_IN_OUT
+Easing, OPTION, K, BOUNCE_IN_OUT
+Easing, OPTION, L, ELASTIC_IN_OUT
+
+TYPE, RANGE, Delay
+Delay, LABEL, Delay
+Delay, MIN, 0
+Delay, MAX, 50
+Delay, STEP, 1
+Delay, VALUE, 10
+
+TYPE, RANGE, Animation Time
+Animation Time, LABEL, Animation Time
+Animation Time, MIN, 0
+Animation Time, MAX, 10
+Animation Time, STEP, 1
+Animation Time, VALUE, 1
+
+TYPE, CHECKBOX, Sequence
+Sequence, LABEL, Sequence
+
+TYPE, CHECKBOX, Reverse
+Reverse, LABEL, Reverse
