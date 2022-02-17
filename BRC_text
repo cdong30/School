@@ -1,29 +1,45 @@
-Layout, HORIZONTAL
-
-TYPE, NOTE, one
-one, LABEL, Edge Detection
+LAYOUT, VERTICAL
 
 TYPE, DROPDOWN, Files
 Files, LABEL, Files
-Files, OPTION, H, House
-Files, OPTION, C, Car
-Files, OPTION, B, Butterfly
+Files, OPTION, A, img1
+Files, OPTION, B, img2
+Files, OPTION, C, img3
 
-TYPE, BUTTON, Load
-Load, LABEL, Load
+TYPE, NOTE, Easing Types
+Easing Types, LABEL, Easing Types
 
-TYPE, RANGE, Threshold
-Threshold, LABEL, Threshold
-Threshold, MIN, 0
-Threshold, MAX, 255
-Threshold, STEP, 1
-Threshold, VALUE, 50
+TYPE, DROPDOWN, Easing
+Easing, LABEL, Easing
+Easing, OPTION,  LINEAR, Linear, SELECTED
+Easing, OPTION,  QUAD_IN, Quad_IN
+Easing, OPTION,  QUAD_OUT, Quad_OUT
+Easing, OPTION,  CUBIC_IN_OUT  , Cubic_IN_OUT
+Easing, OPTION,  QUART_IN_OUT  , Quart_IN_OUT
+Easing, OPTION,  QUINT_IN_OUT  , Quint_IN_OUT
+Easing, OPTION,  SINE_IN_OUT  , SINE_IN_OUT
+Easing, OPTION,  CIRC_IN_OUT  , CIRC_IN_OUT
+Easing, OPTION,  EXPO_IN_OUT  , EXPO_IN_OUT
+Easing, OPTION,  BACK_IN_OUT  , BACK_IN_OUT
+Easing, OPTION,  BOUNCE_IN_OUT  , BOUNCE_IN_OUT
+Easing, OPTION,  ELASTIC_IN_OUT  , ELASTIC_IN_OUT
 
-TYPE, BUTTON, Vert
-Vert, LABEL, Vertical Edges
+TYPE, RANGE, Delay
+Delay, LABEL, Delay
+Delay, MIN, 0
+Delay, MAX, 50
+Delay, STEP, 1
+Delay, VALUE, 10
 
-TYPE, BUTTON, Hor
-Hor, LABEL, Horizontal Edges
+TYPE, RANGE, Animation Time
+Animation Time, LABEL, Animation Time
+Animation Time, MIN, 0
+Animation Time, MAX, 10
+Animation Time, STEP, 1
+Animation Time, VALUE, 1
 
-TYPE, BUTTON, Omni
-Omni, LABEL, Omni-Direction
+TYPE, CHECKBOX, Sequence
+Sequence, LABEL, Sequence
+
+TYPE, CHECKBOX, Reverse
+Reverse, LABEL, Reverse
